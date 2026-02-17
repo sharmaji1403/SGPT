@@ -28,36 +28,3 @@ const connectDB = async () => {
     }
 }
 
-// Route ko 'async' banaya taaki fetch ka wait kar sake
-// app.post("/test", async (req, res) => {
-//     const options = {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//             "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
-//         },
-//         body: JSON.stringify({
-//             model: "gemini-1.5-pro",
-//             messages: [{
-//                 role: "user",
-//                 content: req.body.message
-//             }]
-//         })
-//     };
-
-//     try {
-//         const response = await fetch("https://generativelanguage.googleapis.com/v1beta2/models/gemini-1.5-pro:generateContent?key=${process.env.OPENAI_API_KEY}", options);
-//         const data = await response.json();
-//         // console.log(data.choices[0].message.content);
-//         res.send(data.choices[0].message.content);
-//     }
-//     catch (error) {
-//         console.log("Error Details:", error);
-//     }
-// });
-
-
-// app.listen(PORT, async () => {
-//     console.log(`Server is running on port ${PORT}`);
-//     await connectDB(); // Server start hote hi DB connect hoga
-// });
