@@ -1,0 +1,72 @@
+/* .chats {
+    max-width: 700px;
+    overflow-y: scroll;
+    padding: 8rem;
+    width: 100%;
+} */
+
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+}
+
+
+.gptDiv {
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.userMessage {
+    background-color: #323232;
+    padding: 10px 20px;
+    border-radius: 14px;
+    margin-left: 15rem;
+    max-width: 500px;
+    width: fit-content;
+}
+
+.hljs {
+    border-radius: 14px !important;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+
+.chats {
+    width: 100%;
+    max-width: 700px; /* GPT standard width */
+    margin: 0 auto; /* Center alignment */
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 15px; /* Original padding */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    scrollbar-width: thin;
+    scrollbar-color: #424242 transparent;
+}
+
+/* Scrollbar ki width ekdum kam (5px) */
+.chats::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+/* Track ko transparent rakho taaki background se match kare */
+.chats::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Thumb ka color ekdum dark black/grey */
+.chats::-webkit-scrollbar-thumb {
+    background-color: #424242; /* GPT dark grey thumb */
+    border-radius: 10px;
+}
+
+/* Hover karne par thoda sa chamkega */
+.chats::-webkit-scrollbar-thumb:hover {
+    background-color: #565656; 
+}
