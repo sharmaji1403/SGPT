@@ -5,7 +5,7 @@ import { useContext, useState, useEffect } from "react";
 import { PacmanLoader } from 'react-spinners';
 
 export default function ChatWindow() {
-    const { prompt, setPrompt, reply, setReply, currthreadId, setCurrThreadId, previousChats, setPreviousChats, setNewChat } = useContext(MyContext);
+    const { prompt, setPrompt, reply, setReply, currthreadId, setCurrThreadId, previousChats, setPreviousChats, setNewChat, setIsSidebarOpen } = useContext(MyContext);
     const [loading, setLoading] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -51,6 +51,7 @@ export default function ChatWindow() {
     return (
         <div className="chatWindow">
             <div className="navbar">
+                <i className="fa-solid fa-bars hamburger" onClick={() => setIsSidebarOpen(true)}></i>
                 <span>SigmaGpt <i className="fa-solid fa-chevron-down"></i></span>
                 <div className="userIcon" onClick={handleProfileClicks}>
                     <span className="user"><i className="fa-regular fa-user"></i></span>

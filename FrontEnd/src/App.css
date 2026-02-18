@@ -8,7 +8,18 @@ body{
     padding: 0;
 }
 
-.app{
-    background-color: #212121;
-    display: flex;
+
+.app {
+  background-color: #212121;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Screen se bahar kuch na jaye */
+}
+
+/* Mobile par Sidebar ko hide karne ya toggle karne ke liye query */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column; /* Mobile par vertical layout */
+  }
 }
